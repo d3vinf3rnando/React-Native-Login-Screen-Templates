@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 
 function LoginScreenOne() {
@@ -18,8 +18,14 @@ function LoginScreenOne() {
             <TextInput style={styles.email} value={text} onChangeText={onChangeText}/>
             <TextInput style={styles.email} value={pwtext} onChangeText={pwChangeTex}/>
             <Text style={styles.fogPw}>Forgot Password</Text>
+
+            <Button style={styles.signinBtn} title='Sign in'  spacing={4}/>
+
+            <Text style={styles.continue}>- Or continue with -</Text>
                 
         </View>
+
+        
        </View>
     
   )
@@ -32,17 +38,19 @@ const styles = StyleSheet.create({
         flex:1,
         paddingVertical:'11%',
         paddingHorizontal:'4%',
+        backgroundColor:'#EEF1F7'
     },
 
     view1:{
         flex:1,
-        backgroundColor:'white',
+        backgroundColor:'#EEF1F7',
         top:'8%'
 
     },
 
     view2:{
         flex:2,
+        bottom:'8%'
         
     },
 
@@ -64,10 +72,32 @@ const styles = StyleSheet.create({
     },
 
     email:{
-        height: 50,
+        height: 55,
         margin: 12,
-        borderWidth: 1,
+        borderWidth: 0,
         padding: 10,
+        borderRadius:8,
+        backgroundColor:'white',
+        color:'#AFADAD',
+    },
+
+    fogPw:{
+        textAlign:"right",
+        right:14,
+        top:8,
+    },
+
+    signinBtn:{
+    
+       
+       
+        
+
+    },
+
+    continue:{
+        textAlign:'center',
+        top:20,
     }
     
 })
