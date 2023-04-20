@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 
 function LoginScreenOne() {
@@ -19,13 +19,17 @@ function LoginScreenOne() {
             <TextInput style={styles.email} value={pwtext} onChangeText={pwChangeTex}/>
             <Text style={styles.fogPw}>Forgot Password</Text>
 
-            <Button style={styles.signinBtn} title='Sign in'  spacing={4}/>
+           {/* <Button style={styles.signinBtn} title='Sign in' color='#FC6B68' spacing={4}/> */}
+
+           <TouchableOpacity style={styles.buttonstyle}>
+            <Text>Sign In</Text>
+           </TouchableOpacity>
 
             <Text style={styles.continue}>- Or continue with -</Text>
                 
         </View>
 
-        
+
        </View>
     
   )
@@ -84,16 +88,21 @@ const styles = StyleSheet.create({
     fogPw:{
         textAlign:"right",
         right:14,
-        top:8,
+        top:2,
     },
 
-    signinBtn:{
+    buttonstyle:{
+        borderRadius:10,
+        height: 55,
+        margin: 12,
+        backgroundColor:'#FC6B68',
+        justifyContent: 'center',
+        alignItems: 'center',
+
+
+    },
+
     
-       
-       
-        
-
-    },
 
     continue:{
         textAlign:'center',
