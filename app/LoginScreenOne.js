@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Button, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View,Image } from 'react-native';
 
 
 function LoginScreenOne() {
@@ -22,12 +22,29 @@ function LoginScreenOne() {
            {/* <Button style={styles.signinBtn} title='Sign in' color='#FC6B68' spacing={4}/> */}
 
            <TouchableOpacity style={styles.buttonstyle}>
-            <Text>Sign In</Text>
+            <Text style={styles.signintxt}>Sign In</Text>
            </TouchableOpacity>
 
             <Text style={styles.continue}>- Or continue with -</Text>
+
+            {/*---login button section (google apple facebook)--- */}
+
+            <View style={styles.loginBTNS}>
+                <View>
+                    <Image  source={require('../assets/googleIcon.webp')} style={{width:60, height:60, borderWidth:2,borderColor:'white', borderRadius:8}}/>
+                </View>
+
+                <View>
+                    <Image  source={require('../assets/apple-icon.webp')} style={{width:50, height:50}}/>
+                </View>
+
+                <View>
+                    <Image  source={require('../assets/facebookicon.png')} style={{width:45, height:45, top:5}}/>
+                </View>
+            </View>
                 
         </View>
+        
 
 
        </View>
@@ -98,15 +115,30 @@ const styles = StyleSheet.create({
         backgroundColor:'#FC6B68',
         justifyContent: 'center',
         alignItems: 'center',
+        top:40,
 
 
     },
 
-    
+    signintxt:{
+        color:'white',
+        fontWeight:'bold',
+        fontSize:18,
+
+    },
+
+
 
     continue:{
         textAlign:'center',
-        top:20,
+        top:80,
+    },
+
+    loginBTNS:{
+        flexDirection:'row',
+        top:'35%',
+        justifyContent: 'space-evenly',
+        
     }
     
 })
