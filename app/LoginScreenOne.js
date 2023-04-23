@@ -30,24 +30,42 @@ function LoginScreenOne() {
             {/*---login button section (google apple facebook)--- */}
 
             <View style={styles.loginBTNS}>
-                <View>
-                    <Image  source={require('../assets/googleIcon.webp')} style={{width:60, height:60, borderWidth:2,borderColor:'white', borderRadius:8}}/>
-                </View>
+                <TouchableOpacity>
+                    <View style={{width:100,borderWidth:2,borderColor:'white', borderRadius:8}}>
+                        <Image  source={require('../assets/googleIcon.webp')} style={{width:60, height:60,alignSelf:'center' }}/>
+                    </View>
+                </TouchableOpacity>
+                
+                
+                <TouchableOpacity style={{ borderWidth:2,borderColor:'white', borderRadius:8, width:100}}>
+                    <View >
+                        <Image  source={require('../assets/apple-icon.webp')} style={{width:50, height:50, alignSelf:'center'}}/>
+                    </View>
 
-                <View>
-                    <Image  source={require('../assets/apple-icon.webp')} style={{width:50, height:50}}/>
-                </View>
+                </TouchableOpacity>
+                
 
-                <View>
-                    <Image  source={require('../assets/facebookicon.png')} style={{width:45, height:45, top:5}}/>
+                <TouchableOpacity style={{ width:100,borderWidth:2,borderColor:'white', borderRadius:8}}>
+                <View >
+                    <Image  source={require('../assets/facebookicon.png')} style={{width:45, height:45, top:5,alignSelf:'center'}}/>
                 </View>
+                </TouchableOpacity>
+                
             </View>
+
+            
+            
                 
         </View>
         
 
+            <View style={{bottom:'-2%'}}>
+                <Text style={{textAlign:'center'}}>Not a member?{" "}<Text style={{color:'#1580FF'}}>Register here</Text> </Text>
+            </View>
+
 
        </View>
+       
     
   )
 }
@@ -71,7 +89,7 @@ const styles = StyleSheet.create({
 
     view2:{
         flex:2,
-        bottom:'8%'
+        bottom:'7%'
         
     },
 
